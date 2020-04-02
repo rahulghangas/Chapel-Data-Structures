@@ -194,5 +194,3 @@ a.insert(50);
 writeln(a.inorder());
 a.insert(25);
 writeln(a.inorder());
-
-writeln(a.contains(50));
