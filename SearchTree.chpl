@@ -41,9 +41,9 @@ module SearchTree {
     proc contains(x : eltType) {
       var current = _root;
       while current != nil {
-        if x == current.value {
-          return true;
-        }
+        if x == current!.value then return true;
+        else if x < current!.value then current = current!.left;
+        else current = current!.right;
       }
       return false;
     }
@@ -194,3 +194,5 @@ a.insert(50);
 writeln(a.inorder());
 a.insert(25);
 writeln(a.inorder());
+
+writeln(a.contains(50));
